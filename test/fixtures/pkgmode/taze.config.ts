@@ -1,4 +1,4 @@
-import { defineConfig } from 'taze'
+import { defineConfig } from '8cc'
 
 export default defineConfig({
   exclude: [

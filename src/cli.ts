@@ -79,7 +79,7 @@ function commonOptions(args: Argv<{}>): Argv<CommonOptions> {
 
 // eslint-disable-next-line no-unused-expressions
 yargs(hideBin(process.argv))
-  .scriptName('taze')
+  .scriptName('8cc')
   .usage('$0 [args]')
   .command(
     'usage',

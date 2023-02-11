@@ -105,7 +105,7 @@ export async function check(options: CheckOptions) {
     console.log()
 
     if (options.mode === 'default')
-      console.log(`Run ${c.cyan('taze major')} to check major updates`)
+      console.log(`Run ${c.cyan('8cc major')} to check major updates`)
 
     if (hasChanges) {
       if (options.failOnOutdated)

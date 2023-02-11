@@ -11,14 +11,14 @@ import { getMaxSatisfying, getPrefixedVersion } from '../utils/versions'
 import { getPackageMode } from '../utils/config'
 
 const debug = {
-  cache: _debug('taze:cache'),
-  resolve: _debug('taze:resolve'),
+  cache: _debug('8cc:cache'),
+  resolve: _debug('8cc:resolve'),
 }
 
 let cache: Record<string, { cacheTime: number; data: PackageData }> = {}
 let cacheChanged = false
 
-const cacheDir = resolve(os.tmpdir(), 'taze')
+const cacheDir = resolve(os.tmpdir(), '8cc')
 const cachePath = resolve(cacheDir, 'cache.json')
 const cacheTTL = 30 * 60_000 // 30min
 

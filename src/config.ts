@@ -4,7 +4,7 @@ import { createConfigLoader } from 'unconfig'
 import type { CommonOptions } from './types'
 import { toArray } from './utils/toArray'
 
-const debug = _debug('taze:config')
+const debug = _debug('8cc:config')
 
 export const LOGLEVELS = ['debug', 'info', 'warn', 'error', 'silent']
 
@@ -26,12 +26,12 @@ export async function resolveConfig<T extends CommonOptions>(options: T): Promis
     sources: [
       {
         files: [
-          'taze.config',
+          '8cc.config',
         ],
       },
       {
         files: [
-          '.tazerc',
+          '.8ccrc',
         ],
         extensions: ['json', ''],
       },

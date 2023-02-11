@@ -1,5 +1,5 @@
 {
-  "name": "@taze/example-foo",
+  "name": "@8cc/example-foo",
   "private": true,
   "dependencies": {
     "lodash": "^4.17.10",

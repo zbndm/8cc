@@ -1,12 +1,12 @@
-<h1 align="center">🥦 8c</h1>
+<h1 align="center">🥦 8cc</h1>
 <p align="center"><sup>(/ta:zei/, <em>fresh</em> in Turkish)</sup></p>
 <p align="center">A modern cli tool that keeps your deps fresh</p>
 
-<pre align="center">npx <b>8c</b></pre>
+<pre align="center">npx <b>8cc</b></pre>
 
 <p align="center">or recursively for <b>monorepos</b></p>
 
-<pre align="center">npx 8c <b>-r</b></pre>
+<pre align="center">npx 8cc <b>-r</b></pre>
 
 <p align='center'>
 <img src='./screenshots/r-major.png' width='600'/>
@@ -15,12 +15,12 @@
 ## Features
 
 - Built-in support for monorepos
-- No installation required — `npx 8c`
+- No installation required — `npx 8cc`
 - Safe by default — updates in the version range you are allowed
 
 ## Usage
 
-By default, `8c` will only bump versions in the ranges you specified in `package.json` *(which is safe and the default behavior of `npm install`)*
+By default, `8cc` will only bump versions in the ranges you specified in `package.json` *(which is safe and the default behavior of `npm install`)*
 
 <p align='center'>
 <img src='./screenshots/default.png' width='600'/>
@@ -28,7 +28,7 @@ By default, `8c` will only bump versions in the ranges you specified in `package
 
 To ignore the ranges, explicitly set the maximum allowed version change.
 
-For example `8c major` will check all changes and bump to the latest stable changes including majors (breaking changes), or `8c minor` that bump to latest minor changes within the same major version.
+For example `8cc major` will check all changes and bump to the latest stable changes including majors (breaking changes), or `8cc minor` that bump to latest minor changes within the same major version.
 
 <br>
 <p align='center'>
@@ -53,7 +53,7 @@ Check up to <b>patch</b> updates
 
 ### Monorepo
 
-`8c` has the built-in first-class monorepo support. Simply adding `-r` will scan the subdirectories that contain `package.json` and update them together. It will handle local private packages automatically.
+`8cc` has the built-in first-class monorepo support. Simply adding `-r` will scan the subdirectories that contain `package.json` and update them together. It will handle local private packages automatically.
 
 <p align='center'>
 <img src='./screenshots/r-default.png' width='600'/>
@@ -61,23 +61,23 @@ Check up to <b>patch</b> updates
 
 ## Configures
 
-See `8c --help` for more details
+See `8cc --help` for more details
 
 ### Filters
 
 You can filter out packages you want to check for upgrades by `--include` or `--exclude`; they accept string and regex, separated by commas (,).
 
 ```bash
-8c --include lodash,webpack
-8c --include /react/ --exclude react-dom # regex is also supported
+8cc --include lodash,webpack
+8cc --include /react/ --exclude react-dom # regex is also supported
 ```
 
 ### Config file
 
-With `8c.config.js` file, you can configure the same options the command has.
+With `8cc.config.js` file, you can configure the same options the command has.
 
 ```js
-import { defineConfig } from '8c'
+import { defineConfig } from '8cc'
 
 export default defineConfig({
   // ignore packages from bumping
@@ -102,7 +102,7 @@ export default defineConfig({
 
 ## Alternatives
 
-`8c` is inspired by the following tools.
+`8cc` is inspired by the following tools.
 
 - [npm-check-updates](https://github.com/raineorshine/npm-check-updates)
 - [npm-check](https://github.com/dylang/npm-check)

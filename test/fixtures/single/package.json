@@ -1,8 +1,8 @@
 {
-  "name": "@taze/package1",
+  "name": "@8cc/package1",
   "private": true,
   "dependencies": {
-    "@taze/not-exists": "^4.13.19",
+    "@8cc/not-exists": "^4.13.19",
     "axios": "git:axios/axios",
     "express": "4.12.x",
     "lodash": "^4.13.19",

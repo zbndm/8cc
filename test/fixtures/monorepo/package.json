@@ -1,5 +1,5 @@
 {
-  "name": "@taze/monorepo-example",
+  "name": "@8cc/monorepo-example",
   "private": true,
   "dependencies": {
     "express": "4.12.x",

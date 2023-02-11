@@ -1,0 +1,64 @@
+{
+  "name": "8c",
+  "type": "module",
+  "version": "1.0.6",
+  "packageManager": "pnpm@7.12.0",
+  "description": "A modern cli tool that keeps your deps fresh",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "taze": "bin/taze.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "dev": "cross-env DEBUG=taze:* esno ./src/cli.ts",
+    "start": "esno ./src/cli.ts",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && pnpm publish --no-git-checks",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@antfu/ni": "^0.18.8",
+    "@npmcli/config": "^6.1.3",
+    "detect-indent": "^7.0.1",
+    "pacote": "^13",
+    "prompts": "^2.4.2",
+    "semver": "^7.3.8",
+    "unconfig": "^0.3.7",
+    "yargs": "^17.6.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.30.1",
+    "@antfu/utils": "^0.6.3",
+    "@types/cli-progress": "^3.11.0",
+    "@types/debug": "^4.1.7",
+    "@types/node": "^18.13.0",
+    "@types/pacote": "^11.1.5",
+    "@types/prompts": "^2.4.2",
+    "@types/semver": "^7.3.13",
+    "@types/yargs": "^17.0.22",
+    "bumpp": "^8.2.1",
+    "cli-progress": "^3.11.2",
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.4",
+    "deepmerge": "^4.3.0",
+    "eslint": "^8.34.0",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "picocolors": "^1.0.0",
+    "rimraf": "^3.0.2",
+    "taze": "workspace:*",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.1",
+    "vitest": "^0.25.8"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  }
+}
